@@ -1,12 +1,19 @@
-test_that("play with errors", {
+test_that("test result_attribute handling", {
+
+  testthat::skip_if(
+    !tryCatch(!is.null(attr(hello_extendr_error(1L),"extendr_error")),error=function(e) FALSE),
+    "not testing extendr result_attribute feature, if not enabled"
+  )
   
   expect_equal(
     list(
      err = hello_extendr_error(1L),
      ok = hello_extendr_error(0L)
    ),
-    list(err = structure("imma extendr error", extendr_err = TRUE), 
-    ok = "nothing to see here, cary on")
+    list(
+      err = structure("imma extendr error", extendr_err = TRUE), 
+      ok = "nothing to see here, carry on"
+    )
   )
   
   
@@ -20,7 +27,7 @@ test_that("play with errors", {
    list(err1 = structure("imma string error msg", extendr_err = TRUE), 
     err2 = structure("imma extendr error", extendr_err = TRUE), 
     err3 = structure("debug view 1.4142135623730951", extendr_err = TRUE), 
-    ok = "nothing to see here, cary on")
+    ok = "nothing to see here, carry on")
   )
   
   
@@ -38,3 +45,5 @@ test_that("play with errors", {
     
   
 })
+
+

@@ -5,7 +5,7 @@ use extendr_api::prelude::*;
 fn hello_extendr_error(fail_type: i32) -> Result<Robj> {
     match fail_type {
         1 => Err(extendr_api::Error::Other("imma extendr error".into())),
-        _ => Ok("nothing to see here, cary on".into()),
+        _ => Ok("nothing to see here, carry on".into()),
     }
 }
 
