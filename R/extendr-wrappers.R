@@ -16,3 +16,5 @@ hello_string_error <- function(fail_type) .Call(wrap__hello_string_error, fail_t
 #' @export
 hello_robj_error <- function(fail_type) .Call(wrap__hello_robj_error, fail_type)
 
+unwrap_even_faster <- function(result) .Call(wrap__unwrap_even_faster, result)
+

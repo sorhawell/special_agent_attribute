@@ -8,5 +8,5 @@ crate-type = [ 'staticlib' ]
 name = 'helloextendr'
 
 [dependencies]
-extendr-api = {git = "https://github.com/extendr/extendr", rev = "aecff2890b4090c70fa80c54d870716d8f1e0537", default-features = false, features= ["result_condition"]}
-#extendr-api = {path = "../../../extendr/extendr-api", default-features = false, features= ["result_condition"]}
+#extendr-api = {git = "https://github.com/extendr/extendr", rev = "aecff2890b4090c70fa80c54d870716d8f1e0537", default-features = false, features= ["result_list"]}
+extendr-api = {path = "../../../extendr/extendr-api", default-features = false, features= ["result_condition"]}
